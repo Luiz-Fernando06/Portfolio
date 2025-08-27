@@ -41,7 +41,7 @@ Disponivel: class="instock availability"
 # Estrutura dos dados
     for t, p, d in zip(titulo, Preco, Disp):
         nome = t.a['title']
-        preco = p.text
+        preco = p.text.replace("Â£","£")
         Disponibilidade = d.text.strip()
         livros.append([nome, preco, Disponibilidade])
 
